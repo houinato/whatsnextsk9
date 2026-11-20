@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Placeholder } from "@/components/placeholder";
 import { alternatesFor, area, owner, siteName } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -69,7 +68,7 @@ export default function AboutPage() {
       <h2 id="contact">Get in touch</h2>
       <p>
         Suggestions for the Friday list, corrections, and unsubscribe requests can all come to the same address:{" "}
-        <Placeholder>{owner.contactEmail}</Placeholder>
+        <a href={`mailto:${owner.contactEmail}`}>{owner.contactEmail}</a>
       </p>
       <p>
         Read the <Link href="/privacy">privacy notice</Link> for what the sign-up form stores, and how to ask for your

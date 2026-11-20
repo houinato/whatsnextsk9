@@ -44,7 +44,7 @@ The form collects an email address, an optional first name, and an explicit cons
 
 ## Contact
 
-${owner.contactEmail}
+${owner.name} — ${owner.contactEmail}
 
 ## Optional
 

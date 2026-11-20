@@ -54,7 +54,7 @@ If either Resend variable is missing or empty, `POST /api/subscribe` returns a f
 
 The form asks for an email, an optional first name, and an explicit consent tick. A hidden honeypot field catches simple bots. People can unsubscribe later; see the privacy page.
 
-Before collecting real subscribers, replace every `[Owner: …]` placeholder on the About and Privacy pages. Search the repo for `[Owner:`.
+The privacy notice names Frederic Houinato as the data controller. Contact and privacy requests go to houinato@gmail.com. The site does not publish a postal address or a phone number.
 
 ## Pages
 

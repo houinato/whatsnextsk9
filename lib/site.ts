@@ -1,6 +1,5 @@
 /**
  * Shared copy and URLs. British English.
- * Placeholders are written in square brackets so the owner can search for "[Owner:".
  */
 
 export const siteName = "What's Next SK9";
@@ -14,21 +13,8 @@ export const independenceNote =
   "What's Next SK9 is independent. It is not affiliated with Wilmslow High School, Cheshire East Council, or any college, university or employer, and it is not official careers advice. Check the official pages before you apply.";
 
 export const owner = {
-  contactEmail: "[Owner: add your contact email]",
-  controller:
-    "[Owner: add the name of the person or organisation who runs this newsletter]",
-  postalAddress: "[Owner: add a postal address for privacy requests]",
-  resendPrivacy:
-    "[Owner: confirm Resend’s legal name and privacy notice — https://resend.com/legal/privacy-policy]",
-  transferSafeguard:
-    "[Owner: record the international-transfer safeguard you rely on before collecting real subscribers]",
-  unsubscribeDetail:
-    "[Owner: describe the unsubscribe link once email sending is switched on]",
-  suppression:
-    "[Owner: say how long you keep an unsubscribed address so it is not added again by mistake]",
-  logRetention: "[Owner: confirm how long the host keeps request logs]",
-  childrensCode:
-    "[Owner: read the ICO Children’s code and confirm this age wording before you go live]",
+  name: "Frederic Houinato",
+  contactEmail: "houinato@gmail.com",
 } as const;
 
 const FALLBACK_SITE_URL = "https://whatsnextsk9.vercel.app";
