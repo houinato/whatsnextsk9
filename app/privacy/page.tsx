@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Placeholder } from "@/components/placeholder";
 import { alternatesFor, owner, siteName } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -14,35 +13,27 @@ export const metadata: Metadata = {
   },
 };
 
+function ContactEmail() {
+  return <a href={`mailto:${owner.contactEmail}`}>{owner.contactEmail}</a>;
+}
+
 export default function PrivacyPage() {
   return (
     <div className="wrap prose">
       <header className="page-intro">
         <p className="kicker">Privacy</p>
         <h1>Privacy notice</h1>
-        <p>Last updated: 16 November 2026.</p>
+        <p>Last updated: 20 November 2026.</p>
         <p>
           This notice explains what {siteName} collects when you sign up for the Friday email, why, and how to stop
           it. It is written for the UK GDPR and the Privacy and Electronic Communications Regulations (PECR).
         </p>
-        <p>
-          Yellow dashed boxes are placeholders. The owner needs to fill them in before collecting real subscribers.
-        </p>
       </header>
 
       <h2>Who is responsible</h2>
+      <p>The data controller is {owner.name}.</p>
       <p>
-        The data controller is <Placeholder>{owner.controller}</Placeholder>.
-      </p>
-      <p>
-        Contact for privacy requests: <Placeholder>{owner.contactEmail}</Placeholder>
-      </p>
-      <p>
-        Postal address: <Placeholder>{owner.postalAddress}</Placeholder>
-      </p>
-      <p>
-        If you run this as a sole trader or an individual, you can use your name. Check the ICO&apos;s guidance before
-        you publish a home address. Do not leave the placeholders in place once people can sign up.
+        Contact for privacy requests: <ContactEmail />
       </p>
 
       <h2>What we collect</h2>
@@ -88,15 +79,15 @@ export default function PrivacyPage() {
 
       <h2>Who processes it</h2>
       <p>
-        Contacts are stored with Resend, which will also deliver the email once sending is switched on.{" "}
-        <Placeholder>{owner.resendPrivacy}</Placeholder>
+        Contacts are stored with Resend, which will also deliver the email once sending is switched on. Resend&apos;s
+        privacy notice is at{" "}
+        <a href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a>.
       </p>
       <p>
-        The site is hosted on Vercel. A normal request log may briefly include your IP address.{" "}
-        <Placeholder>{owner.logRetention}</Placeholder>
+        The site is hosted on Vercel. A normal request log may briefly include your IP address.
       </p>
       <p>
-        Resend stores data in the United States. <Placeholder>{owner.transferSafeguard}</Placeholder>
+        Resend stores data in the United States. Its privacy notice describes how that data is handled.
       </p>
       <p>
         This site does not currently use analytics or advertising cookies. If another tool is added later, it will be
@@ -106,16 +97,14 @@ export default function PrivacyPage() {
       <h2>How long we keep it</h2>
       <p>
         We keep your contact details for as long as you stay subscribed. If you unsubscribe, we stop sending the
-        newsletter. <Placeholder>{owner.suppression}</Placeholder>
+        newsletter and keep the email address only so it is not added again by mistake. Email <ContactEmail /> if you
+        want that record deleted.
       </p>
 
       <h2>How to unsubscribe</h2>
       <p>
-        Every newsletter email should include an unsubscribe link. <Placeholder>{owner.unsubscribeDetail}</Placeholder>
-      </p>
-      <p>
-        You can also email <Placeholder>{owner.contactEmail}</Placeholder> and ask to be removed. We will treat that
-        as withdrawing consent.
+        Every newsletter email includes an unsubscribe link. You can also email <ContactEmail /> and ask to be
+        removed. We will treat that as withdrawing consent.
       </p>
 
       <h2>Your rights</h2>
@@ -144,8 +133,7 @@ export default function PrivacyPage() {
       <h2>Children</h2>
       <p>
         The newsletter is written for parents and for teenagers. Please only sign up if you are able to consent to
-        receiving the email. If you are under 13, ask a parent or guardian to sign up instead.{" "}
-        <Placeholder>{owner.childrensCode}</Placeholder>
+        receiving the email. If you are under 13, ask a parent or guardian to sign up instead.
       </p>
 
       <h2>Changes</h2>

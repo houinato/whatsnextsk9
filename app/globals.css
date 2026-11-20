@@ -533,14 +533,6 @@ input[type="text"]:focus {
   font-weight: 700;
 }
 
-.placeholder {
-  background: #fff4d4;
-  border: 1px dashed var(--clay);
-  border-radius: 0.3rem;
-  padding: 0.05em 0.35em;
-  font-weight: 700;
-}
-
 .site-footer {
   margin-top: auto;
   padding: 0 0 1.5rem;
